@@ -1,3 +1,25 @@
+## Foveal Hypoplasia
+
+**Paper coming soon ...**
+
+**Data will be uploaded soon ...** 
+
+**Pre-trained models will be uploaded soon ...**
+
+**Examples of individuals affected with [WS](https://en.wikipedia.org/wiki/Williams_syndrome) and [22q11DS](https://en.wikipedia.org/wiki/DiGeorge_syndrome).**
+
+### Train StyleGAN2-ada on individuals affected with WS, 22q and other diseases. 
+
+This code exactly follows how the original StyleGAN2 formats and trains the data. I recommend that you read their original instruction (included below) for more detail. Here, we will show you the key steps to train on WS, 22q and other disease images. [This code is part of another project where we classify these conditions.](https://github.com/datduong/Classify-WS-22q-Img)
+
+StyleGAN2 takes in images in tensorflow record, and we have already converted images into tensorflow record for you. 
+
+Notable changes from the original Nvidia source are: 
+* [`dense_layer_split_label_emb`]() in `training/networks.py`. Here, we represent the label of a person as 2 vectors: the disease label and age bracket (0-2, 2-9, 10-19, 20-35, >35 yrs old). Hence, we train a smaller number parameters and need fewer images. 
+* [`train_with_labels.py`](). The original StyleGAN2 was not trained with labels, so we add extra argument inputs. 
+
+We trained 5 GAN models (based on 5-fold cross-validation); [training scripts are in here]().
+
 ## StyleGAN2 with adaptive discriminator augmentation (ADA)<br>&mdash; Official TensorFlow implementation
 
 ![Teaser image](./docs/stylegan2-ada-teaser-1024x252.png)

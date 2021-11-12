@@ -1,4 +1,4 @@
-## Foveal Hypoplasia
+## Face images of individuals with WS, 22q11DS, other conditions, and unaffected
 
 **Paper coming soon ...**
 

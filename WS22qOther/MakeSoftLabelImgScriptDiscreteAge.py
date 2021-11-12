@@ -139,12 +139,6 @@ def make_label_pairs (name_array1,name_array2,labelset_head_in_gan,labelset_tail
 label_pair = make_label_pairs(labelset_tail, labelset_head,labelset_head_in_gan,labelset_tail_in_gan)
 print (label_pair)
 
-
-# labelset=sorted('22q11DS2y,22q11DSadolescence,22q11DSolderadult,22q11DSyoungadult,22q11DSyoungchild,Controls2y,Controlsadolescence,Controlsolderadult,Controlsyoungadult,Controlsyoungchild,WS2y,WSadolescence,WSolderadult,WSyoungadult,WSyoungchild'.split(','))
-# label_seed = {}
-# for i,l in enumerate(labelset): 
-#   label_seed[l] = i * 500
-
 labelset=sorted('WS,22q11DS,Controls'.split(','))
 label_seed = {}
 for i,l in enumerate(labelset): 

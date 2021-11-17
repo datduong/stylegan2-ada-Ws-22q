@@ -73,8 +73,8 @@ with open(os.path.join(args.image_dir,args.outjson), 'w') as outfile: # ! we fix
 print (len(label_json['labels']))
 
 
+# ! manual align
 # {'22q11DS_earlySlide89.png', 'WS_lateSlide125.png', 'Controls_earlySlide10.png'}
-
 # python3 predict.py --csv $inputname --output $outputname --detected_faces $detectfaces                         
 # using CUDA?: True                                                                                              
 # ---0/997---                                                                                                    

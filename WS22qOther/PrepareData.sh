@@ -52,7 +52,7 @@ python3 AlignImage.py $datapath/QualtricImg/22q11DS $datapath/QualtricImg/22q11D
 
 # ! make tfrecord data.
 # ! extract WS + 22q + controls + random-normal-faces -- 5 folds
-# ! OVERSAMPLE BY 5X ??
+# ! OVERSAMPLE BY 5X ?? we need to do this because we have 5x more normal vs. diseases 
 
 cd /data/duongdb/stylegan2-ada-Ws-22q
 

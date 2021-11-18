@@ -26,16 +26,19 @@ Below are examples of transforming one disease to the next. Realistically, a per
 
 * From left to right: a person with 55% and 45% characteristic mixture of 22q11DS and another unknown disease, 22q11DS and unaffected, 22q11DS and WS, respectively.
 
-<img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C1%2C4M0.55T0.622q11DS2y.png" width="25%">
-<img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C2%2C4M0.55T0.622q11DS2y.png" width="25%">
-<img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C3%2C4M0.55T0.622q11DS2y.png" width="25%">
-
+<div>
+    <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C1%2C4M0.55T0.622q11DS2y.png" width="25%">
+    <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C2%2C4M0.55T0.622q11DS2y.png" width="25%">
+    <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C3%2C4M0.55T0.622q11DS2y.png" width="25%">
+</div>
 
 * From left to right: a person with 55% and 45% characteristic mixture of WS and 22q11DS, WS and another unknown disease, WS and unaffected, respectively.
 
-<img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00006514F0C3%2C7C0%2C7M0.55T0.6WSyoungadult.png" width="25%">
-<img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00006514F0C3%2C7C1%2C7M0.55T0.6WSyoungadult.png" width="25%">
-<img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00006514F0C3%2C7C2%2C7M0.55T0.6WSyoungadult.png" width="25%">
+<div>
+    <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00006514F0C3%2C7C0%2C7M0.55T0.6WSyoungadult.png" width="25%">
+    <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00006514F0C3%2C7C1%2C7M0.55T0.6WSyoungadult.png" width="25%">
+    <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00006514F0C3%2C7C2%2C7M0.55T0.6WSyoungadult.png" width="25%">
+</div>
 
 
 ## StyleGAN2 with adaptive discriminator augmentation (ADA)<br>&mdash; Official TensorFlow implementation

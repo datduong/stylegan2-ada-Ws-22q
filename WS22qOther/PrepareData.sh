@@ -28,7 +28,7 @@ cd /data/duongdb/WS22qOther_08102021/TrimImg
 
 
 # ! align images into ffhq format # this has to be done so we can greatly leverage transfer-ability of ffhq
-resolution=512
+resolution=512 # ! resolution doesn't really matter because we will resize/convert into tfrecords later. 
 datapath=/data/duongdb/WS22qOther_08102021
 datadir=/data/duongdb # ! needed if run sbatch call
 cd $datadir/stylegan2-ada-Ws-22q/WS22qOther # ! use styleflow... 

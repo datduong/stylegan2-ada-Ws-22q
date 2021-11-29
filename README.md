@@ -24,6 +24,8 @@ We trained 5 GAN models (based on 5-fold cross-validation); [training scripts ar
 
 Below are examples of transforming one disease to the next. Realistically, a person would not be affected by two diseases; however, we have the technology to do this, so why not try it? 
 
+<br />
+
 * From left to right: a person with 55% and 45% characteristic mixture of 22q11DS and another unknown disease, 22q11DS and unaffected, 22q11DS and WS, respectively.
 
 <div>
@@ -32,6 +34,7 @@ Below are examples of transforming one disease to the next. Realistically, a per
     <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C3%2C4M0.55T0.622q11DS2y.png" width="25%">
 </div>
 
+<br />
 <br />
 
 * From left to right: a person with 55% and 45% characteristic mixture of WS and 22q11DS, WS and another unknown disease, WS and unaffected, respectively.

@@ -32,6 +32,8 @@ Below are examples of transforming one disease to the next. Realistically, a per
     <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C3%2C4M0.55T0.622q11DS2y.png" width="25%">
 </div>
 
+<br />
+
 * From left to right: a person with 55% and 45% characteristic mixture of WS and 22q11DS, WS and another unknown disease, WS and unaffected, respectively.
 
 <div>

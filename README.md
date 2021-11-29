@@ -18,7 +18,7 @@ Notable changes from the original Nvidia source are:
 * [`dense_layer_split_label_emb`](https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/training/networks.py#L64) in `training/networks.py`. Here, we represent the label of a person as 2 vectors: the disease label and age bracket (0-2, 2-9, 10-19, 20-35, >35 yrs old). Hence, we train a smaller number parameters and need fewer images. 
 * [`train_with_labels.py`](https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/train_with_labels.py). The original StyleGAN2 was not trained with labels, so we add extra argument inputs. 
 
-We trained 5 GAN models (based on 5-fold cross-validation); [training scripts are in here](https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/WS22qOther/MakeTrainScriptForGAN.py).
+We trained 5 GAN models (based on 5-fold cross-validation); [training scripts are in here](https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/WS22qOther/MakeTrainScriptForGAN.py). Please [change the folder paths with respect to your own machine](https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/WS22qOther/MakeTrainScriptForGAN.py#L12). 
 
 ### Examples 
 

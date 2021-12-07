@@ -8,6 +8,7 @@
 
 **Examples of individuals affected with [WS](https://en.wikipedia.org/wiki/Williams_syndrome) and [22q11DS](https://en.wikipedia.org/wiki/DiGeorge_syndrome).**
 
+<u **[Google Colab]**>(https://colab.research.google.com/drive/14NUoZViMVGCa85uL8cJX0L6Fy3SysqRH#scrollTo=RJ85wWuVPF8R)** 
 ### Train StyleGAN2-ada on individuals affected with WS, 22q and other diseases. 
 
 This code exactly follows how the original StyleGAN2 formats and trains the data. I recommend that you read their original instruction (included below) for more detail. Here, we will show you the key steps to train on WS, 22q and other disease images. [This code is part of another project where we classify these conditions.](https://github.com/datduong/Classify-WS-22q-Img)

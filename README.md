@@ -1,6 +1,6 @@
 ## Face images of individuals with WS, 22q11DS, other conditions, and unaffected
 
-**Paper coming soon ...**
+**[Paper](https://www.medrxiv.org/content/10.1101/2021.12.09.21267472v1)**
 
 **Data will be uploaded soon ...** 
 

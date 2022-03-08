@@ -23,7 +23,7 @@ from copy import deepcopy
 
 #----------------------------------------------------------------------------
 
-def generate_images(network_pkl, seeds, truncation_psi, outdir, class_idx, dlatents_npz, mix_ratio=None, class_idx_next=None, suffix='', savew=False, special_mix_ratio=None, prefix=''):
+def generate_images(network_pkl, seeds, truncation_psi, outdir, class_idx, dlatents_npz, mix_ratio=None, class_idx_next=None, suffix='', savew=0, special_mix_ratio=None, prefix='', dpi=0):
     tflib.init_tf()
     print('Loading networks from "%s"...' % network_pkl)
     with dnnlib.util.open_url(network_pkl) as fp:
@@ -40,7 +40,7 @@ def generate_images(network_pkl, seeds, truncation_psi, outdir, class_idx, dlate
         for i, img in enumerate(imgs):
             fname = f'{outdir}/dlatent{i:02d}.png'
             print (f'Saved {fname}')
-            PIL.Image.fromarray(img, 'RGB').save(fname)
+            PIL.Image.fromarray(img, 'RGB').save(fname,dpi=(dpi,dpi))
         return
 
     # Render images for dlatents initialized from random seeds.
@@ -103,7 +103,7 @@ def generate_images(network_pkl, seeds, truncation_psi, outdir, class_idx, dlate
             tflib.set_vars({var: rnd.randn(*var.shape.as_list()) for var in noise_vars}) # [height, width]
             images = Gs.run(z, label, **Gs_kwargs) # [minibatch, height, width, channel] # ! @label is used here
         
-        PIL.Image.fromarray(images[0], 'RGB').save(f'{outdir}/'+prefix+f'seed{seed:08d}'+suffix+'.png')
+        PIL.Image.fromarray(images[0], 'RGB').save(f'{outdir}/'+prefix+f'seed{seed:08d}'+suffix+'.png',dpi=(dpi,dpi))
 
     if savew:
         w_dict = {seed: w for seed, w in zip(seeds, list(all_w))} # [layer, component]
@@ -163,8 +163,8 @@ def main():
     parser.add_argument('--special_mix_ratio', type=float, default=0, help='meant for split label emb')
     parser.add_argument('--suffix', type=str, default='', help='Add extra name')
     parser.add_argument('--prefix', type=str, default='', help='Add extra name')
-    parser.add_argument('--savew', action='store_true', default=False, help='save w?')
- 
+    parser.add_argument('--savew', type=int, default=0, help='save w?')
+    parser.add_argument('--dpi', type=int, default=300, help='dpi')
     
     args = parser.parse_args()
     generate_images(**vars(args))

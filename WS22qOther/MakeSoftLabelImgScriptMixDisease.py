@@ -1,6 +1,6 @@
 import re,sys,os,pickle
 
-# sinteractive --time=2:00:00 --gres=gpu:p100:1 --mem=12g --cpus-per-task=12
+# sinteractive --time=2:00:00 --gres=gpu:p100:1 --mem=8g --cpus-per-task=6
 # sbatch --partition=gpu --time=2-00:00:00 --gres=gpu:p100:2 --mem=24g --cpus-per-task=24 
 
 script="""#!/bin/bash
@@ -63,7 +63,7 @@ fi
 
 truncationpsi=TRUNCATION # @trunc=0.7 is recommended on their face dataset, looks like 0.5 works pretty well. 
 
-cd /data/duongdb/stylegan2-ada-Ws-22q 
+cd /data/duongdb/DeployOnline/stylegan2-ada-Ws-22q 
 
 outdir=OUTPUTDIR
 mkdir $outdir
@@ -91,7 +91,7 @@ import pandas as pd
 now = datetime.now() # current date and time
 date_time = now.strftime("%m%d%Y%H%M%S")
 
-os.chdir('/data/duongdb/stylegan2-ada-Ws-22q')
+os.chdir('/data/duongdb/DeployOnline/stylegan2-ada-Ws-22q')
 
 # ------------------------------------------------------------------------------------------
 
@@ -99,7 +99,7 @@ name_option = 'WS+22q11DS+Control+Normal+kimg10+target0.6+blankcenter' # ! name 
 TRAINCSV = '/data/duongdb/WS22qOther_08102021/Classify/train+blankcenter+WS+22q11DS+Control+Normal+Split.csv' # ! blank background center ?? +blankcenter
 TRAINCSV = pd.read_csv ( TRAINCSV ) 
 
-MIXRATIO = 1
+MIXRATIO = 0.55 # 1
 TRUNCATION = .6
 
 # ------------------------------------------------------------------------------------------
@@ -192,7 +192,7 @@ for fold in [0]: # ,1,2,3,4
   if UseAvergeDiseaseCount: 
     average_count_per_disease = ComputeAverageCountPerDisease(fold, labelset)
   # 
-  OUTPUTDIR=os.path.join(rootout,'F'+str(fold)+'X'+str(MULTIPLY_BY))
+  OUTPUTDIR=os.path.join(rootout,'Remake-F'+str(fold)+'X'+str(MULTIPLY_BY))
   if not os.path.exists (OUTPUTDIR):  
     os.mkdir(OUTPUTDIR)
   for selectlabel in label_pair_key: 
@@ -245,7 +245,7 @@ for fold in [0]: # ,1,2,3,4
     time.sleep(1)
     os.system('sbatch --partition=gpu --time=00:35:00 --gres=gpu:k80:1 --mem=6g --cpus-per-task=4 '+fname)
 
-
+#
 if UseAvergeDiseaseCount: 
   print (average_count_per_disease)
 
